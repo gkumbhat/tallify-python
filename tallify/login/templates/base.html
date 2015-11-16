@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tallify | {% block title %}{% endblock %}</title>
+    {% load staticfiles %}
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div class="container body">
+      <div class="container-fluid header-image" style="background-color:ED734A; height:70px; font-weight:bold; font-size:3em; color:#FFF;">
+          <div class="row">
+            <div class="col-sm-1">
+              <center><img src="{% static 'imgs/tallify_logo_round.png' %}" style="width:68px; height:auto; padding:5px;" /></center>
+            </div>
+              <div class="col-sm-4">
+              Tallify
+              </div>
+          </div>
+      </div>
+      <nav class="navbar navbar-default" style="font-size:1.5em;">
+        <div class="container-fluid">
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" style="float:left; display:block;">
+              <li><a href="#">Home<span class="sr-only">(current)</span></a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <h3>{% block head %}{% endblock %}</h3>
+  {% block content %}{% endblock %}
+
+    <div class="container footer" style="bottom:0; display:block; border:none; background-color:#F9F9F9;">
+
+    </div>
+
+    </div>
+
+  </body>
+</html>
